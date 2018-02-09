@@ -1,0 +1,17 @@
+{
+  "name": "calc",
+  "version": "1.0.0",
+  "description": "Kalkulator",
+  "main": "calc.js",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css",
+    "start": "webpack --config webpack.config.js"
+  },
+  "author": "maciej",
+  "license": "ISC"
+}

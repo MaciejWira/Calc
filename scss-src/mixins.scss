@@ -1,0 +1,22 @@
+@mixin columns($cols,$mgn){
+  width: ((100% / $cols) - $mgn) + ($mgn / $cols);
+  margin-right: $mgn;
+  margin-bottom: $mgn;
+  float: left;
+  box-sizing: border-box;     
+  &:nth-of-type(#{$cols}n) {
+      margin-right: 0;
+  };
+};
+
+@mixin mediaQ($arg){
+  @media (max-width: $arg){
+    @content;
+  }
+}
+
+@mixin mediaQFont($arg){
+  @media (max-width: $arg){
+    font-size: $arg / 20;
+  }
+}

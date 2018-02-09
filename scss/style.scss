@@ -1,0 +1,113 @@
+@import "../scss-src/vars.scss";
+@import "../scss-src/mixins.scss";
+@import "../scss-src/preloader.scss";
+
+* {
+  font-family: 'Orbitron', sans-serif;
+  word-break: break-all
+}
+
+body {
+  padding-top: 40px;
+  background: $grey3;
+  @include mediaQ(400px) {
+    background: $grey1;
+  }
+}
+
+h1 {
+  color: $white;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#calculator {
+  background: radial-gradient($grey0, $grey1);
+  width: 350px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 0px 5px 135px 10px $black, inset 0px 0px 5px 5px $grey3;
+  @include mediaQ(400px) {
+    padding: 5px;
+    background: none;
+    width: 100%;
+    border-radius: none;
+    box-shadow: none;
+  }
+}
+
+#screen {
+  background: linear-gradient(to top, $grey0, $white);
+  color: $black;
+  padding: 5px 15px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px 2px $grey2;
+  transition: all 0.5s;
+}
+
+#history-output {
+  color: $grey1;
+  font-size: 12px;
+}
+
+#main-output {
+  font-size: 24px;
+}
+
+#input {
+  color: $grey2
+}
+
+#operator {
+  color: $red;
+}
+
+#calc-buttons {
+  padding: 5px;
+  button {
+    background: linear-gradient(to top left, $grey3, $grey2);
+    color: $white;
+    @include columns(4, 3%);
+    border: none;
+    border-radius: 5px;
+    padding: 3px;
+    transition: all 0.3s;
+    box-shadow: inset 0 0 5px $black;
+    &:hover {
+      cursor: pointer;
+      background: linear-gradient(to top left, $grey0, $white);
+      color: $black;
+    }
+  }
+  &:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+#alert-box {
+  display: none;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(0,0,0,0.9);
+  transition: all 0.3s;
+  div {
+    position: relative;
+    top: 150px;
+    display: inline-block;
+    width: auto;
+    margin: auto;
+    text-align: center;
+    background: $white;
+    padding:10px;
+    border-radius: 5px;
+  }
+}
