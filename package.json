@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Kalkulator",
   "main": "calc.js",
-  "dependencies": {},
+  "dependencies": {
+    "normalize-scss": "^7.0.1"
+  },
   "devDependencies": {
     "webpack": "^3.10.0"
   },

@@ -1,12 +1,11 @@
 import cons from './const.js';
-import fadeOut from './fadeOut.js';
+import classToggle from './classToggle.js';
 
 const preloader = () => {
-
   window.onload = () => {
     setTimeout(function(){
-      fadeOut(cons.pre)
-    },500)
+      classToggle.addClass(cons.pre, "fade-out")
+    },1000)
   };
 };
 

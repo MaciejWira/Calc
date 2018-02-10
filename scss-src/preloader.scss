@@ -6,7 +6,7 @@
     100% {opacity:0}
 }
 
-#preloader {
+.preloader {
     position: fixed;
     opacity: 1;
     background: $white;
@@ -15,28 +15,28 @@
     width: 100%;
     height: 100%;
     transition: all 1s;
-    div {
+    &__inside {
         text-align: center;
         margin: auto;
         position: relative;
         top: 50%;
-        span {
-            display: inline-block;
-            margin: 3px;
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background: $black;
-            animation-name: preloader;
-            animation-duration: 0.9s;
-            animation-iteration-count: infinite;
-            animation-timeline-function: ease-in-out;
-            &:nth-of-type(2){
-                animation-delay: 0.6s;
-            }
-            &:nth-of-type(3){
-                animation-delay: 0.3s;
-            }
+    }
+    &__dot {
+        display: inline-block;
+        margin: 3px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $black;
+        animation-name: preloader;
+        animation-duration: 0.9s;
+        animation-iteration-count: infinite;
+        animation-timeline-function: ease-in-out;
+        &:nth-of-type(2){
+            animation-delay: 0.6s;
+        }
+        &:nth-of-type(3){
+            animation-delay: 0.3s;
         }
     }
 }
