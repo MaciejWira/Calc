@@ -1,0 +1,19 @@
+@import "../scss-src/vars.scss";
+@import "../scss-src/mixins.scss";
+
+.calculator {
+  background: radial-gradient($grey0, $grey1);
+  width: 350px;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  box-shadow: 0px 5px 135px 10px $black, inset 0px 0px 5px 5px $grey3;
+  @include mediaQ(400px) {
+    padding: 5px;
+    background: none;
+    width: 100%;
+    border-radius: none;
+    box-shadow: none;
+  }
+}

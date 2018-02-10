@@ -1,15 +1,11 @@
 import cons from './const.js';
 import dom from './dom.js';
-import fadeOut from './fadeOut.js';
+import classToggle from './classToggle.js';
 
 const showAlert = () => {
-  cons.alert.style.display = "block";
-  setTimeout(function(){
-    cons.alert.style.opacity = 1;
-  },10)
-
+  classToggle.addClass(cons.alert, "fade-in");
   cons.alert.addEventListener("click", function(){
-    fadeOut(cons.alert);
+    classToggle.removeClass(cons.alert, "fade-in");
   });
 
 };

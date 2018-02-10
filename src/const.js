@@ -1,7 +1,7 @@
 import dom from './dom.js';
 
-let num = dom._qAll(".number"),
-    op = dom._qAll(".operation"),
+let num = dom._qAll(".button--number"),
+    op = dom._qAll(".button--operation"),
     numA = [],
     opA = [];
 
@@ -14,10 +14,10 @@ for (let i = 0; i < op.length; i++){
 }
 
 const cons =  {
-  history: dom._id("history-output"),
-  out: dom._id("main-output"),
-  operator: dom._id("operator"),
-  in: dom._id("input"),
+  history: dom._id("screen-history"),
+  out: dom._id("screen-output"),
+  operator: dom._id("screen-operator"),
+  in: dom._id("screen-input"),
   num: numA,
   op: opA,
   res: dom._id("result"),
